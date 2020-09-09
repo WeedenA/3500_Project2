@@ -1,0 +1,50 @@
+Script started on 2020-09-09 18:21:36-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="93" LINES="49"]
+]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ PATH[K[K[K[Kexport PATH=/home/tsuits/comp3500/proe[Kject2/cs161/bin:$PATH [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[KH
+]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ [K]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ [K]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ export CFLAGS="-g -O2 -Wno-error"
+]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ [K]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ [K]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ cd ~/Do[K[KDownloads
+]0;tsuits@pop-os: ~/Downloads[01;32mtsuits@pop-os[00m:[01;34m~/Downloads[00m$ ls
+ [0m[01;35m100.jpg[0m   [01;35me.jpg[0m              'jpg2pdf (1).pdf'   [01;35mpr.jpg[0m
+ [01;35m80.jpg[0m   'jpg2pdf(100).pdf'   jpg2pdf.pdf        [01;31mProjects_export.zip[0m
+]0;tsuits@pop-os: ~/Downloads[01;32mtsuits@pop-os[00m:[01;34m~/Downloads[00m$ mv Projects_export.zip /home/tsuits[K[K[K[K[K[K[K[K[K[K[K[K~/comp3500/project2/
+]0;tsuits@pop-os: ~/Downloads[01;32mtsuits@pop-os[00m:[01;34m~/Downloads[00m$ cd ~/comp3500/project2/
+]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ unzip Projects_export.zip 
+Archive:  Projects_export.zip
+   creating: OS161/
+   creating: OS161/GDB and OS161/
+  inflating: OS161/GDB and OS161/CS161 GDB Guide.pdf  
+  inflating: OS161/GDB and OS161/GDB and OS161-TLB Miss.html  
+  inflating: OS161/GDB and OS161/GDB and OS_161.pdf  
+  inflating: OS161/cs161-binutils-1.5.tgz  
+  inflating: OS161/cs161-gcc-1.5.tgz  
+  inflating: OS161/cs161-gdb-1.5.tgz  
+  inflating: OS161/os161-1.10.tar.gz  
+  inflating: OS161/sys161-1.14.tar.gz  
+  inflating: OS161/sys161.conf       
+]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ cd OS161/
+]0;tsuits@pop-os: ~/comp3500/project2/OS161[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2/OS161[00m$ mv * ~/h[Kcomp3500/project2/
+]0;tsuits@pop-os: ~/comp3500/project2/OS161[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2/OS161[00m$ rmdir OS161
+rmdir: failed to remove 'OS161': No such file or directory
+]0;tsuits@pop-os: ~/comp3500/project2/OS161[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2/OS161[00m$ cd ..
+]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ rmdir OS161/
+]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ rm -rf References/
+]0;tsuits@pop-os: ~/comp3500/project2[01;32mtsuits@pop-os[00m:[01;34m~/comp3500/project2[00m$ cd cs161/[K[K[K[K[K[K[K[K[Kgit status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mdeleted:    References/Git Instructions.pdf[m
+	[31mdeleted:    References/comp2710-gdb 2.ppt[m
+	[31mdeleted:    References/gdb.htm[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mGDB and OS161/[m
+	[31mProjects_export.zip[m
+	[31mcs161-binutils-1.5.tgz[m
+	[31mcs161-gcc-1.5.tgz[m
+	[31mcs161-gdb-1.5.tgz[m
+	[31mos161-1.10.tar.gz[m
+	[31msection4.txt[m
+	
