@@ -1,27 +1,27 @@
-1.from ln 39, asmdefs.h >> register # $29 (#define sp $29 /* stack pointer */)
-2.from ln 7, bus.h >> Bus supported = LAMEbus (* The only bus we support for MIPS is LAMEbus)
-3.from lns 19-20, spl.h >> splhigh sets priority to the highest level possibile, which disables all interrupts, whereas spl0 sets priority to 0, enabling all interrupts.
-4.from types.h >> MIPS is a 32-bit platform,and  typedefs ensure integers used are of the right type and size (unsigned vs signed, 32bit vs 8/16/64bit)
-5.from ln 23, spl.h >> splx(s), spl0(), and splhigh() all return the old interrupt state
-6.from lns 61-64, spl.h >> Traditionally, the highest interrupt level, defined by SPL_HIGH, is 15.
-7.from lns 14-20, clock.h >> Depending on an optional if-else choice, hardclock interrupts are generated either 10,000, or more realistically, 100 times/sec.
-8.from lns 11-14, dev.h >> A standard VFS device uses the functions: *d_open, *d_close, *d_io, and *d_ioctl
-9. From ln 6, sfs.h >> Max length of  avolume name, defined in SFS_VOLNAME_SIZE, is 32 characters
+1.From ln 39, asmdefs.h >> register # $29 (#define sp $29 /* stack pointer */)
+2.From ln 7, bus.h >> Bus supported = LAMEbus (* The only bus we support for MIPS is LAMEbus)
+3.From lns 19-20, spl.h >> splhigh sets priority to the highest level possibile, which disables all interrupts, whereas spl0 sets priority to 0, enabling all interrupts.
+4.From types.h >> MIPS is a 32-bit platform,and  typedefs ensure integers used are of the right type and size (unsigned vs signed, 32bit vs 8/16/64bit)
+5.From ln 23, spl.h >> splx(s), spl0(), and splhigh() all return the old interrupt state
+6.From lns 61-64, spl.h >> Traditionally, the highest interrupt level, defined by SPL_HIGH, is 15.
+7.From lns 14-20, clock.h >> Depending on an optional if-else choice, hardclock interrupts are generated either 10,000, or more realistically, 100 times/sec.
+8.From lns 11-14, dev.h >> A standard VFS device uses the functions: *d_open, *d_close, *d_io, and *d_ioctl
+9.From ln 6, sfs.h >> Max length of  avolume name, defined in SFS_VOLNAME_SIZE, is 32 characters
 10.From ln 7, sfs.h >> The number of direct blocks in an inode, defined by SFS_NDIRECT, is 15, with 128 direct blocks per indirect block, defined in SFS_DBPERIDB
-11. From lns 9-12, fs.h >> The operations involved with implementing a new filesystem are: fs_sync, fs_getvolname, fs_getroot, and fs_unmount
+11.From lns 9-12, fs.h >> The operations involved with implementing a new filesystem are: fs_sync, fs_getvolname, fs_getroot, and fs_unmount
 12.From lns 80-85, thread.h >> To put the current thread to sleep until wakeup() is called, use void thread_sleep(const void *addr)
-13. From ln 11, types.h >> OS/161 pids are 32 bits, defined in "typedef int32_t pid_t /* Process ID */
-14. From lns 37-162, vnode.h >> Assuming a prefix of "vop_", the following operations may be performed on a vnode: open, close, reclaim // read, readlink, getdirentry, write,ioctl, stat, gettype, tryseek, fsync, mmap, truncate, namefile // creat, symlink, mkdir, link, remove, rmdir, rename // lookup, lookparent
-15. From lns 7-8, limits.h >> The longest full path name is defined in PATH_MAX with a length of 1024
-16. From ln 19, callno.h >> The system call number for a reboot is 8, defined in SYS_reboot
-17. From ln 23, unistd.h >> STDIN_FILENO is defined in line 23 of kern/include/kern/unistd.h (#define STDIN_FILENO 0 /* Standard input */)
-18. From scheduler.c and thread.c >> You may initialize the thread system before the scheduler. Initializing the thread system will only start the first thread, whereas the scheduler creates a run queue for existing and future threads, so initializing the first thread should not produce any fatal errors.
-19. From lns 97-98, thread.c >> "Zombies are threads/processes that have exited but not been fully deleted yet"
+13.From ln 11, types.h >> OS/161 pids are 32 bits, defined in "typedef int32_t pid_t /* Process ID */
+14.From lns 37-162, vnode.h >> Assuming a prefix of "vop_", the following operations may be performed on a vnode: open, close, reclaim // read, readlink, getdirentry, write,ioctl, stat, gettype, tryseek, fsync, mmap, truncate, namefile // creat, symlink, mkdir, link, remove, rmdir, rename // lookup, lookparent
+15.From lns 7-8, limits.h >> The longest full path name is defined in PATH_MAX with a length of 1024
+16.From ln 19, callno.h >> The system call number for a reboot is 8, defined in SYS_reboot
+17.From ln 23, unistd.h >> STDIN_FILENO is defined in line 23 of kern/include/kern/unistd.h (#define STDIN_FILENO 0 /* Standard input */)
+18.From scheduler.c and thread.c >> You may initialize the thread system before the scheduler. Initializing the thread system will only start the first thread, whereas the scheduler creates a run queue for existing and future threads, so initializing the first thread should not produce any fatal errors.
+19.From lns 97-98, thread.c >> "Zombies are threads/processes that have exited but not been fully deleted yet"
 20.From ln 28, scheduler.c >> The initial run queue is 32 (runqueue = q_create(32))
-21. From device.c, vfslist.c >> Device names in OS/161 are plaintext, valid string representations of the actual device itself. For instance, for the first default LAMEbus Hard Drive, the device name would be 'lhd0', for the second 'lhd1', and so forth.
-22. From lns 22-24, vfslist.c >> Raw device names are the same string as the device name, with the phrase 'raw' attached to the end. From the above example, the first raw hard drive would be named 'lhd0raw'. Values are non-null iff the device can have a filesystem mounted on it.
-23. From lns 24-27, vnode.c >> The value in 'vn_countlock" protects the vnode reference count
-24. From lns 141-143, 160-162, device.c >> Supported device types are block and character devices
+21.From device.c, vfslist.c >> Device names in OS/161 are plaintext, valid string representations of the actual device itself. For instance, for the first default LAMEbus Hard Drive, the device name would be 'lhd0', for the second 'lhd1', and so forth.
+22.From lns 22-24, vfslist.c >> Raw device names are the same string as the device name, with the phrase 'raw' attached to the end. From the above example, the first raw hard drive would be named 'lhd0raw'. Values are non-null iff the device can have a filesystem mounted on it.
+23.From lns 24-27, vnode.c >> The value in 'vn_countlock" protects the vnode reference count
+24.From lns 141-143, 160-162, device.c >> Supported device types are block and character devices
 
 
 
